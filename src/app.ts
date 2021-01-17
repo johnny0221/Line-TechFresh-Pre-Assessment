@@ -48,7 +48,7 @@ function handleEvent(event: WebhookEvent): Observable<Promise<MessageAPIResponse
       case 'follow':
         let botMsg: Message | Message[] = {
           type: 'text',
-          text: `Welcome to Johnny's chatbot, I am helper \n I am going to help you know Johnny more.`
+          text: `Welcome to Johnny's chatbot, I am helper. \n I am going to help you know Johnny more.`
         } 
         return from(client.replyMessage(event.replyToken, botMsg))
     }
