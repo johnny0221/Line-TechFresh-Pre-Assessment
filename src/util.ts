@@ -51,8 +51,8 @@ export const richmenuTemplateEnglish: line.RichMenu = {
         },
         "action": {
           "type": "message",
-          "label": "Skills",
-          "text": "Skills"
+          "label": "skills",
+          "text": "skills"
         }
       },
       // Project
@@ -79,8 +79,8 @@ export const richmenuTemplateEnglish: line.RichMenu = {
         },
         "action": {
           "type": "message",
-          "label": "projects",
-          "text": "projects"
+          "label": "why line",
+          "text": "why line"
         }
       },
       // Toggle
@@ -1572,6 +1572,1026 @@ export const questionResponse: types.QuestionResponse = {
                   },
               ]
             }
+        },
+        skills: {
+            "type": "bubble",
+            "header": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Technical Skills",
+                  "color": "#ffffff",
+                  "weight": "bold",
+                  "size": "xl"
+                }
+              ],
+              "height": "75px",
+              "backgroundColor": "#D66D75",
+              "justifyContent": "center",
+              "alignItems": "center"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Frontend",
+                  "weight": "bold",
+                  "size": "xl",
+                  "margin": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "size": "xxl",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611023622/angular_sab6as.png",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/javascript_o1fxrd.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/typescript_jf0tsi.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "margin": "md",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "size": "sm",
+                      "url": "https://img.icons8.com/fluent/2x/star-half-empty.png"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/rxjs_hh4ces.jpg",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "size": "sm",
+                      "url": "https://img.icons8.com/fluent/2x/star-half-empty.png"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024098/download_haswiw.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "margin": "md",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024098/bootstrap_bhymok.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/sass_esbd0h.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "text",
+                  "text": "Backend",
+                  "size": "xl",
+                  "weight": "bold",
+                  "margin": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/nodejs_njtpjl.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "size": "sm",
+                      "url": "https://img.icons8.com/fluent/2x/star-half-empty.png"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/spring_qf4dxz.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "size": "sm",
+                      "url": "https://img.icons8.com/fluent/2x/star-half-empty.png"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "text",
+                  "text": "Database",
+                  "size": "xl",
+                  "weight": "bold",
+                  "offsetTop": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mysql_y1o0yo.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mongodb_uhrh3h.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/redis_r19yio.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "text",
+                  "text": "Others",
+                  "size": "xl",
+                  "weight": "bold",
+                  "margin": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/git_etgyo0.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/docker_soagxk.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "text",
+                  "text": "English",
+                  "weight": "bold",
+                  "size": "xl",
+                  "margin": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "TOEFL: 100(26 27 24 23 )",
+                      "weight": "regular"
+                    }
+                  ],
+                  "paddingTop": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "TOEIC: 855",
+                      "weight": "regular"
+                    }
+                  ],
+                  "paddingTop": "md"
+                }
+              ]
+            }
+        },
+        projects: {
+            "type": "carousel",
+            "contents": [
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611033704/Component_11_kss9um.png",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "fit",
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "Roommatch",
+                      "weight": "bold",
+                      "size": "xl"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "margin": "md",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "2020 Aug - Current",
+                          "size": "sm",
+                          "color": "#999999",
+                          "flex": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "margin": "lg",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Overview",
+                          "weight": "bold",
+                          "size": "lg",
+                          "decoration": "none"
+                        },
+                        {
+                          "type": "text",
+                          "text": "Roommatch is a platform for ",
+                          "margin": "lg"
+                        },
+                        {
+                          "type": "text",
+                          "text": "international students to manage "
+                        },
+                        {
+                          "type": "text",
+                          "text": "their subleases, find roommates "
+                        },
+                        {
+                          "type": "text",
+                          "text": "and sell second hand items."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Tech Stacks",
+                          "margin": "md",
+                          "size": "lg",
+                          "weight": "bold"
+                        },
+                        {
+                          "type": "box",
+                          "layout": "baseline",
+                          "contents": [
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611023622/angular_sab6as.png",
+                              "size": "xl"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611034935/images_emvrhm.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/rxjs_hh4ces.jpg",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/typescript_jf0tsi.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024098/download_haswiw.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/nodejs_njtpjl.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mysql_y1o0yo.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mongodb_uhrh3h.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/git_etgyo0.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            }
+                          ],
+                          "margin": "lg"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Award",
+                          "margin": "md",
+                          "size": "lg",
+                          "weight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "text": "1. Ranked top 5 out of 112 teams",
+                          "margin": "lg"
+                        },
+                        {
+                          "type": "text",
+                          "text": "in the CS411 at UIUC."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": []
+                    }
+                  ]
+                },
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "action": {
+                        "type": "uri",
+                        "label": "WEBSITE",
+                        "uri": "https://johnny0221.github.io/CS411/"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "action": {
+                        "type": "uri",
+                        "label": "Demo Viedo",
+                        "uri": "https://www.youtube.com/watch?v=o7ZJzRBe2v4&feature=youtu.be"
+                      }
+                    }
+                  ],
+                  "flex": 0
+                }
+              },
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611036833/1455016_0b2d_2_oo41pn.jpg",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "fit"
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "Dating app",
+                      "weight": "bold",
+                      "size": "xl"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "margin": "md",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "2020 Mar - 2020 Jun",
+                          "size": "sm",
+                          "color": "#999999",
+                          "flex": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "margin": "lg",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Overview",
+                          "weight": "bold",
+                          "size": "lg",
+                          "decoration": "none"
+                        },
+                        {
+                          "type": "text",
+                          "text": "This application is based the ",
+                          "margin": "lg"
+                        },
+                        {
+                          "type": "text",
+                          "text": "course on Udemy to build a "
+                        },
+                        {
+                          "type": "text",
+                          "text": "dating app, built functionalities "
+                        },
+                        {
+                          "type": "text",
+                          "text": "like photo uploading and "
+                        },
+                        {
+                          "type": "text",
+                          "text": "friendship system. "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Tech Stacks",
+                          "margin": "md",
+                          "size": "lg",
+                          "weight": "bold"
+                        },
+                        {
+                          "type": "box",
+                          "layout": "baseline",
+                          "contents": [
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611023622/angular_sab6as.png",
+                              "size": "xl"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/rxjs_hh4ces.jpg",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/typescript_jf0tsi.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024098/bootstrap_bhymok.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611040220/csharp_i2eifx.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mysql_y1o0yo.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/git_etgyo0.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            }
+                          ],
+                          "margin": "lg"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "action": {
+                        "type": "uri",
+                        "label": "github repo",
+                        "uri": "https://github.com/johnny0221/FullStack-Project-Angular-DotnetCore"
+                      }
+                    }
+                  ],
+                  "flex": 0
+                }
+              },
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611036633/omo_qrprqw.png",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "fit"
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "OMO dessert",
+                      "weight": "bold",
+                      "size": "xl"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "margin": "md",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "2019 Oct - 2020 Jan",
+                          "size": "sm",
+                          "color": "#999999",
+                          "flex": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "margin": "lg",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Overview",
+                          "weight": "bold",
+                          "size": "lg",
+                          "decoration": "none"
+                        },
+                        {
+                          "type": "text",
+                          "text": "This application aims to introduce ",
+                          "margin": "lg"
+                        },
+                        {
+                          "type": "text",
+                          "text": "OMO dessert which is a dessert "
+                        },
+                        {
+                          "type": "text",
+                          "text": "shop founded by my cousin"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Tech Stacks",
+                          "margin": "md",
+                          "size": "lg",
+                          "weight": "bold"
+                        },
+                        {
+                          "type": "box",
+                          "layout": "baseline",
+                          "contents": [
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611023622/angular_sab6as.png",
+                              "size": "xl"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/rxjs_hh4ces.jpg",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/typescript_jf0tsi.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/nodejs_njtpjl.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mongodb_uhrh3h.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/git_etgyo0.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/sass_esbd0h.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611037801/download_1_bqnxoi.png",
+                              "margin": "sm",
+                              "size": "xl"
+                            }
+                          ],
+                          "margin": "sm"
+                        }
+                      ],
+                      "margin": "lg"
+                    }
+                  ]
+                },
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "action": {
+                        "type": "uri",
+                        "label": "github repo",
+                        "uri": "https://github.com/johnny0221/OMO_Dessert-Angular-NodeJS"
+                      }
+                    }
+                  ],
+                  "flex": 0
+                }
+              }
+            ]
         }
     },
     ch: {
@@ -1589,7 +2609,7 @@ export const questionResponse: types.QuestionResponse = {
                   "contents": [
                     {
                       "type": "text",
-                      "text": "Personal Experiences",
+                      "text": "個人經歷",
                       "color": "#ffffff",
                       "size": "xl",
                       "flex": 4,
@@ -2219,7 +3239,7 @@ export const questionResponse: types.QuestionResponse = {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "2. 使用Angular 10, BootStrap,"
+                            "text": "2. 使用Angular 10，BootStrap，"
                           }
                         ]
                       }
@@ -2228,51 +3248,51 @@ export const questionResponse: types.QuestionResponse = {
                     "spacing": "sm"
                   },
                   {
-                      "type": "box",
-                      "layout": "horizontal",
-                      "contents": [
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
                         {
-                          "type": "box",
-                          "layout": "vertical",
-                          "contents": [
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
                             {
-                              "type": "box",
-                              "layout": "horizontal",
-                              "contents": [
-                                {
-                                  "type": "filler"
-                                },
-                                {
-                                  "type": "box",
-                                  "layout": "vertical",
-                                  "contents": [],
-                                  "backgroundColor": "#6486E3",
-                                  "width": "2px"
-                                },
-                                {
-                                  "type": "filler"
-                                }
-                              ],
-                              "flex": 1
+                                "type": "filler"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [],
+                                "backgroundColor": "#6486E3",
+                                "width": "2px"
+                            },
+                            {
+                                "type": "filler"
                             }
-                          ],
-                          "width": "12px"
-                        },
+                            ],
+                            "flex": 1
+                        }
+                        ],
+                        "width": "12px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
                         {
-                          "type": "box",
-                          "layout": "horizontal",
-                          "contents": [
-                            {
-                              "type": "text",
-                              "text": "RxJS 並實作了Event Bus",
-                              "margin": "xl"
-                            }
-                          ]
-                        },
-                        
-                      ],
-                      "height": "32px",
-                      "spacing": "sm"
+                            "type": "text",
+                            "text": "RxJS 並實作了Event Bus",
+                            "margin": "xl"
+                        }
+                        ]
+                    },
+                    
+                    ],
+                    "height": "32px",
+                    "spacing": "sm"
                   },
                   {
                     "type": "box",
@@ -2514,7 +3534,7 @@ export const questionResponse: types.QuestionResponse = {
                     "height": "32px",
                     "spacing": "sm"
                   },
-                  // first point of the roommatch
+                  // first point of the thu
                   {
                     "type": "box",
                     "layout": "horizontal",
@@ -2654,7 +3674,7 @@ export const questionResponse: types.QuestionResponse = {
                     "height": "32px",
                     "spacing": "sm"
                   },
-                  // second point of the roommatch
+                  // second point of the thu
                   {
                     "type": "box",
                     "layout": "horizontal",
@@ -2796,6 +3816,1013 @@ export const questionResponse: types.QuestionResponse = {
                   },
               ]
             }
+        },
+        skills: {
+            "type": "bubble",
+            "header": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "專業技能",
+                  "color": "#ffffff",
+                  "weight": "bold",
+                  "size": "xl"
+                }
+              ],
+              "height": "75px",
+              "backgroundColor": "#D66D75",
+              "justifyContent": "center",
+              "alignItems": "center"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "前端",
+                  "weight": "bold",
+                  "size": "xl",
+                  "margin": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "size": "xxl",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611023622/angular_sab6as.png",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/javascript_o1fxrd.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/typescript_jf0tsi.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "margin": "md",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "size": "sm",
+                      "url": "https://img.icons8.com/fluent/2x/star-half-empty.png"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/rxjs_hh4ces.jpg",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "size": "sm",
+                      "url": "https://img.icons8.com/fluent/2x/star-half-empty.png"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024098/download_haswiw.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "margin": "md",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024098/bootstrap_bhymok.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/sass_esbd0h.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "text",
+                  "text": "後端",
+                  "size": "xl",
+                  "weight": "bold",
+                  "margin": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/nodejs_njtpjl.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "size": "sm",
+                      "url": "https://img.icons8.com/fluent/2x/star-half-empty.png"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/spring_qf4dxz.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "size": "sm",
+                      "url": "https://img.icons8.com/fluent/2x/star-half-empty.png"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "text",
+                  "text": "資料庫",
+                  "size": "xl",
+                  "weight": "bold",
+                  "offsetTop": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mysql_y1o0yo.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mongodb_uhrh3h.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/redis_r19yio.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "text",
+                  "text": "其他",
+                  "size": "xl",
+                  "weight": "bold",
+                  "margin": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/git_etgyo0.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "icon",
+                      "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/docker_soagxk.png",
+                      "size": "xxl",
+                      "offsetTop": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm",
+                      "margin": "md"
+                    },
+                    {
+                      "type": "icon",
+                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                      "size": "sm"
+                    }
+                  ],
+                  "paddingTop": "md",
+                  "height": "50px"
+                },
+                {
+                  "type": "text",
+                  "text": "語文能力",
+                  "weight": "bold",
+                  "size": "xl",
+                  "margin": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "TOEFL: 100(26 27 24 23 )",
+                      "weight": "regular"
+                    }
+                  ],
+                  "paddingTop": "md"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "TOEIC: 855",
+                      "weight": "regular"
+                    }
+                  ],
+                  "paddingTop": "md"
+                }
+              ]
+            }
+        },
+        projects: {
+            "type": "carousel",
+            "contents": [
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611033704/Component_11_kss9um.png",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "fit",
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "Roommatch",
+                      "weight": "bold",
+                      "size": "xl"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "margin": "md",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "2020 Aug - Current",
+                          "size": "sm",
+                          "color": "#999999",
+                          "flex": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "margin": "lg",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "專案敘述",
+                          "weight": "bold",
+                          "size": "lg",
+                          "decoration": "none"
+                        },
+                        {
+                          "type": "text",
+                          "text": "Roommatch是一個專門為UIUC",
+                          "margin": "lg"
+                        },
+                        {
+                          "type": "text",
+                          "text": "學生所打造的平台，此平台提供的"
+                        },
+                        {
+                          "type": "text",
+                          "text": "內容主要協助管理租屋處，找室友"
+                        },
+                        {
+                          "type": "text",
+                          "text": "以及販售二手商品。"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "使用技術",
+                          "margin": "md",
+                          "size": "lg",
+                          "weight": "bold"
+                        },
+                        {
+                          "type": "box",
+                          "layout": "baseline",
+                          "contents": [
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611023622/angular_sab6as.png",
+                              "size": "xl"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611034935/images_emvrhm.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/rxjs_hh4ces.jpg",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/typescript_jf0tsi.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024098/download_haswiw.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/nodejs_njtpjl.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mysql_y1o0yo.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mongodb_uhrh3h.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/git_etgyo0.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            }
+                          ],
+                          "margin": "lg"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Award",
+                          "margin": "md",
+                          "size": "lg",
+                          "weight": "bold",
+                        },
+                        {
+                          "type": "text",
+                          "text": "1. 在UIUC CS411課堂評選112隊",
+                          "margin": "lg"
+                        },
+                        {
+                          "type": "text",
+                          "text": "中獲得前5名。"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": []
+                    }
+                  ]
+                },
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "action": {
+                        "type": "uri",
+                        "label": "前往網站",
+                        "uri": "https://johnny0221.github.io/CS411/"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "action": {
+                        "type": "uri",
+                        "label": "展示影片",
+                        "uri": "https://www.youtube.com/watch?v=o7ZJzRBe2v4&feature=youtu.be"
+                      }
+                    }
+                  ],
+                  "flex": 0
+                }
+              },
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611036833/1455016_0b2d_2_oo41pn.jpg",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "fit"
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "Dating app",
+                      "weight": "bold",
+                      "size": "xl"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "margin": "md",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "2020 Mar - 2020 Jun",
+                          "size": "sm",
+                          "color": "#999999",
+                          "flex": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "margin": "lg",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "專案敘述",
+                          "weight": "bold",
+                          "size": "lg",
+                          "decoration": "none"
+                        },
+                        {
+                          "type": "text",
+                          "text": "此專案依照Udemy的課程來打造",
+                          "margin": "lg"
+                        },
+                        {
+                          "type": "text",
+                          "text": "一個約會網站，實作了照片上傳"
+                        },
+                        {
+                          "type": "text",
+                          "text": "功能，好友系統等功能。"
+                        },
+                      ],
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "使用技術",
+                          "margin": "md",
+                          "size": "lg",
+                          "weight": "bold"
+                        },
+                        {
+                          "type": "box",
+                          "layout": "baseline",
+                          "contents": [
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611023622/angular_sab6as.png",
+                              "size": "xl"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/rxjs_hh4ces.jpg",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/typescript_jf0tsi.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024098/bootstrap_bhymok.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611040220/csharp_i2eifx.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mysql_y1o0yo.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/git_etgyo0.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            }
+                          ],
+                          "margin": "lg"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "action": {
+                        "type": "uri",
+                        "label": "github repo",
+                        "uri": "https://github.com/johnny0221/FullStack-Project-Angular-DotnetCore"
+                      }
+                    }
+                  ],
+                  "flex": 0
+                }
+              },
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611036633/omo_qrprqw.png",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "fit"
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "OMO dessert",
+                      "weight": "bold",
+                      "size": "xl"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "margin": "md",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "2019 Oct - 2020 Jan",
+                          "size": "sm",
+                          "color": "#999999",
+                          "flex": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "margin": "lg",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "專案敘述",
+                          "weight": "bold",
+                          "size": "lg",
+                          "decoration": "none"
+                        },
+                        {
+                          "type": "text",
+                          "text": "OMO Dessert是一間家人開的甜",
+                          "margin": "lg"
+                        },
+                        {
+                          "type": "text",
+                          "text": "點店，此專案志在建立形象網站。"
+                        },
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "使用技術",
+                          "margin": "md",
+                          "size": "lg",
+                          "weight": "bold"
+                        },
+                        {
+                          "type": "box",
+                          "layout": "baseline",
+                          "contents": [
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611023622/angular_sab6as.png",
+                              "size": "xl"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/rxjs_hh4ces.jpg",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024100/typescript_jf0tsi.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/nodejs_njtpjl.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/mongodb_uhrh3h.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/git_etgyo0.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611024099/sass_esbd0h.png",
+                              "size": "xl",
+                              "margin": "sm"
+                            },
+                            {
+                              "type": "icon",
+                              "url": "https://res.cloudinary.com/dfzjudoit/image/upload/v1611037801/download_1_bqnxoi.png",
+                              "margin": "sm",
+                              "size": "xl"
+                            }
+                          ],
+                          "margin": "lg"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "action": {
+                        "type": "uri",
+                        "label": "github repo",
+                        "uri": "https://github.com/johnny0221/OMO_Dessert-Angular-NodeJS"
+                      }
+                    }
+                  ],
+                  "flex": 0
+                }
+              }
+            ]
         }
     }
 }

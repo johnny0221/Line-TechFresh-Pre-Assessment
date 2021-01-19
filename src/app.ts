@@ -116,6 +116,46 @@ function handleEvent(event: WebhookEvent): Promise<MessageAPIResponseBase | null
            ]
            return client.replyMessage(event.replyToken, msgs);
         }
+        if (event.message.text === 'skills') {
+          const msgs: Message[] = [
+           {
+             type: 'flex',
+             altText: 'This is a flex msg',
+             contents: utils.questionResponse.en.skills
+           }
+          ]
+          return client.replyMessage(event.replyToken, msgs);
+        }
+        if (event.message.text === '專業技能') {
+          const msgs: Message[] = [
+           {
+             type: 'flex',
+             altText: 'This is a flex msg',
+             contents: utils.questionResponse.ch.skills
+           }
+          ]
+          return client.replyMessage(event.replyToken, msgs);
+        }
+        if (event.message.text === 'projects') {
+          const msgs: Message[] = [
+           {
+             type: 'flex',
+             altText: 'This is a flex msg',
+             contents: utils.questionResponse.en.projects
+           }
+          ]
+          return client.replyMessage(event.replyToken, msgs);
+        }
+        if (event.message.text === '個人專案') {
+          const msgs: Message[] = [
+           {
+             type: 'flex',
+             altText: 'This is a flex msg',
+             contents: utils.questionResponse.ch.projects
+           }
+          ]
+          return client.replyMessage(event.replyToken, msgs);
+        }
         const echo: Message[] = [
           { type: 'text', text: (event.message as TextEventMessage).text}, 
           ];
