@@ -110,7 +110,7 @@ function handleEvent(event: WebhookEvent): Promise<MessageAPIResponseBase | null
           const msgs: Message[] = [
            {
              type: 'flex',
-             altText: 'This is a flex msg',
+             altText: 'Johnny\'s personal experience',
              contents: utils.questionResponse.en.exp
            }
           ]
@@ -120,7 +120,7 @@ function handleEvent(event: WebhookEvent): Promise<MessageAPIResponseBase | null
           const msgs: Message[] = [
             {
               type: 'flex',
-              altText: 'This is a flex msg',
+              altText: '子洋的個人經歷',
               contents: utils.questionResponse.ch.exp
             }
            ]
