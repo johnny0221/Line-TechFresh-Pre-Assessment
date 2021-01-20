@@ -1,7 +1,6 @@
 import express, { Application, Request, Response, NextFunction, text } from 'express';
 import * as line from '@line/bot-sdk';
-import { FlexBubble, FlexMessage, Message, MessageAPIResponseBase, QuickReply, TextEventMessage, WebhookEvent } from '@line/bot-sdk';
-import { forkJoin, from, Observable } from 'rxjs';
+import { Message, MessageAPIResponseBase,WebhookEvent } from '@line/bot-sdk';
 import * as utils from './util';
 import fs from 'fs';
 require('dotenv').config();
@@ -30,9 +29,12 @@ initializeEnRichMenu();
 app.use(line.middleware(config))
 
 app.post('/', (req: Request, res: Response) => {
-  from(Promise.all(req.body.events.map(handleEvent))).subscribe((result) => {
-    console.log('result', result);
+  Promise.all(req.body.events.map(handleEvent))
+  .then((result) => {
     return res.json(result);
+  })
+  .catch(err => {
+    console.log(err);
   })
 })
 
@@ -42,7 +44,6 @@ app.post('/', (req: Request, res: Response) => {
 app.use(utils.handleError);
 
 function handleEvent(event: WebhookEvent): Promise<MessageAPIResponseBase | null> {
-    console.log(event);
     switch (event.type) {
       case 'follow':
         if (event.source.userId) {
@@ -303,10 +304,18 @@ function handleEvent(event: WebhookEvent): Promise<MessageAPIResponseBase | null
         return client.replyMessage(event.replyToken, utils.defaultResponse);
       case 'postback':
         if (event.postback.data === 'lang=ch' && event.source.userId) {
-          client.linkRichMenuToUser(event.source.userId, richMenuChineseId);
+          client.linkRichMenuToUser(event.source.userId, richMenuChineseId) 
+          .then((res) => {
+            return Promise.resolve(true);
+          })
+          .catch(err => console.log(err));
         }
         if (event.postback.data === 'lang=en' && event.source.userId) {
-          client.linkRichMenuToUser(event.source.userId, richMenuEnglishId);
+          client.linkRichMenuToUser(event.source.userId, richMenuEnglishId)
+          .then((res) => {
+            return Promise.resolve(true);
+          })
+          .catch(err => console.log(err));
         }
         return Promise.resolve(null);
       default: 
@@ -319,7 +328,6 @@ function handleEvent(event: WebhookEvent): Promise<MessageAPIResponseBase | null
 function initializeChRichMenu() {
   client.createRichMenu(richmenuChTemplate)
     .then((id) => {
-    console.log(id)
       richMenuChineseId = id;
       return client.setRichMenuImage(id, fs.createReadStream('./assets/chinese.png'))
     })

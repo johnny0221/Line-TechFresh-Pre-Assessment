@@ -24,85 +24,338 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var line = __importStar(require("@line/bot-sdk"));
-var crypto_1 = __importDefault(require("crypto"));
-var rxjs_1 = require("rxjs");
-var middlewares = __importStar(require("./util"));
+var utils = __importStar(require("./util"));
+var fs_1 = __importDefault(require("fs"));
 require('dotenv').config();
 var app = express_1.default();
-var channelSecret = '42e172546e09e334d0672faccaf5a1dc';
-function getSignature(body) {
-    return crypto_1.default.createHmac('SHA256', channelSecret).update(body).digest('base64');
-}
-var middlewareConfig = {
+// Line Client config
+var config = {
     channelAccessToken: process.env['channelAccessToken'],
     channelSecret: process.env['channelSecret']
 };
-var clientConfig = {
-    channelAccessToken: 'AqZQQu8AAPKxJ3Lx+jHITUq8l7c+AG/tW6i/4nc1FMhDXUPzMlTqZKzPNGrceT3rJvJgHouPmgLp+FtmA26U9ut8x7PmphQ/oEM0yF0OLFAFmXWaNp9i+O4AYKy7r/dr3CEExT7JOiWyNBtsybVkTAdB04t89/1O/w1cDnyilFU=',
-    channelSecret: '42e172546e09e334d0672faccaf5a1dc'
-};
-var client = new line.Client(clientConfig);
-app.use(line.middleware(middlewareConfig));
-app.post('/', middlewares.checkValidationMiddleware, function (req, res) {
-    handleEvent(req.body.events[0]).subscribe(function (result) {
-        console.log('hello world');
-        console.log(result);
-        res.json(result);
+var client = new line.Client(config);
+// RichMenu setup.
+var richMenuChineseId = '';
+var richMenuEnglishId = '';
+var richmenuChTemplate = utils.richmenuTemplateChinese;
+var richmenuEnTemplate = utils.richmenuTemplateEnglish;
+initializeChRichMenu();
+initializeEnRichMenu();
+// validating if the message comes from Line Platform
+app.use(line.middleware(config));
+app.post('/', function (req, res) {
+    Promise.all(req.body.events.map(handleEvent))
+        .then(function (result) {
+        return res.json(result);
+    })
+        .catch(function (err) {
+        console.log(err);
     });
-    // Promise
-    // .all(req.body.events.map(handleEvent))
-    // .then((result) => {
-    //     console.log(result);
-    //     return res.json(result);
-    // })
-    // .catch((err) => {
-    //   console.error(err);
-    //   res.status(500).end();
-    // });
 });
+// handle two possible errors
+// 1. SignatureValidationFailed --> the request does not come from line platform.
+// 2. JSONParseError
+app.use(utils.handleError);
 function handleEvent(event) {
-    if (event.type !== 'message' || event.message.type !== 'text') {
-        // ignore non-text-message event
-        return rxjs_1.from(Promise.resolve(null));
-    }
-    // create a echoing text message
-    var echo = [
-        { type: 'text', text: event.message.text },
-        {
-            "type": "text",
-            "text": "Select your favorite food category or send me your location!",
-            "quickReply": {
-                "items": [
-                    {
-                        "type": "action",
-                        "imageUrl": "https://example.com/sushi.png",
-                        "action": {
-                            "type": "message",
-                            "label": "Sushi",
-                            "text": "Y"
-                        }
-                    },
-                    {
-                        "type": "action",
-                        "imageUrl": "https://example.com/tempura.png",
-                        "action": {
-                            "type": "message",
-                            "label": "Tempura",
-                            "text": "Tempura"
-                        }
-                    },
-                    {
-                        "type": "action",
-                        "action": {
-                            "type": "location",
-                            "label": "Send location"
-                        }
-                    }
-                ]
+    switch (event.type) {
+        case 'follow':
+            if (event.source.userId) {
+                client.linkRichMenuToUser(event.source.userId, richMenuChineseId);
             }
-        }
-    ];
-    // use reply API
-    return rxjs_1.from(client.replyMessage(event.replyToken, echo));
+            var msgs = [
+                {
+                    type: 'text',
+                    text: utils.welcomeMsg.ch.welcome
+                },
+                {
+                    type: 'text',
+                    text: utils.welcomeMsg.ch.commands
+                },
+                {
+                    type: 'text',
+                    text: utils.welcomeMsg.en.welcome
+                },
+                {
+                    type: 'text',
+                    text: utils.welcomeMsg.en.commands
+                }
+            ];
+            return client.replyMessage(event.replyToken, msgs);
+        case 'unfollow':
+            return client.unlinkRichMenuFromUser(event.source.userId);
+        case 'message':
+            if (event.message.type === 'sticker') {
+                var msg = {
+                    type: 'text',
+                    text: 'Sorry, I am dumb, I hope I can understand this sticker someday...'
+                };
+                return client.replyMessage(event.replyToken, msg);
+            }
+            if (event.message.type === 'image') {
+                var msg = {
+                    type: 'text',
+                    text: "Wow, It's a beuatiful image, thanks for sending it to me."
+                };
+                return client.replyMessage(event.replyToken, msg);
+            }
+            if (event.message.type !== 'text') {
+                return Promise.resolve(null);
+            }
+            if (event.message.text === utils.richMenuText.en.about) {
+                var msgs_1 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.en.about
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_1);
+            }
+            if (event.message.text === utils.richMenuText.ch.about) {
+                var msgs_2 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.ch.about
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_2);
+            }
+            if (event.message.text === utils.richMenuText.en.exp) {
+                var msgs_3 = [
+                    {
+                        type: 'flex',
+                        altText: 'This is a flex msg',
+                        contents: utils.questionResponse.en.exp
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_3);
+            }
+            if (event.message.text === utils.richMenuText.ch.exp) {
+                var msgs_4 = [
+                    {
+                        type: 'flex',
+                        altText: 'This is a flex msg',
+                        contents: utils.questionResponse.ch.exp
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_4);
+            }
+            if (event.message.text === utils.richMenuText.en.skills) {
+                var msgs_5 = [
+                    {
+                        type: 'flex',
+                        altText: 'Johnny\'s technical skills.',
+                        contents: utils.questionResponse.en.skills
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_5);
+            }
+            if (event.message.text === utils.richMenuText.ch.skills) {
+                var msgs_6 = [
+                    {
+                        type: 'flex',
+                        altText: '子洋的專業技能',
+                        contents: utils.questionResponse.ch.skills
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_6);
+            }
+            if (event.message.text === utils.richMenuText.en.projects) {
+                var msgs_7 = [
+                    {
+                        type: 'flex',
+                        altText: 'Johnny\'s project',
+                        contents: utils.questionResponse.en.projects
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_7);
+            }
+            if (event.message.text === utils.richMenuText.ch.projects) {
+                var msgs_8 = [
+                    {
+                        type: 'flex',
+                        altText: '子洋的個人專案',
+                        contents: utils.questionResponse.ch.projects
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_8);
+            }
+            if (event.message.text === utils.richMenuText.en.whyline) {
+                var msgs_9 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.en.whyLine
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_9);
+            }
+            if (event.message.text === utils.richMenuText.ch.whyline) {
+                var msgs_10 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.ch.whyLine
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_10);
+            }
+            if (event.message.text === utils.quickreplyText.ch.personality) {
+                var msgs_11 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.ch.personality
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_11);
+            }
+            if (event.message.text === utils.quickreplyText.ch.age) {
+                var msgs_12 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.ch.age
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_12);
+            }
+            if (event.message.text === utils.quickreplyText.ch.education) {
+                var msgs_13 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.ch.education
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_13);
+            }
+            if (event.message.text === utils.quickreplyText.ch.english) {
+                var msgs_14 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.ch.english
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_14);
+            }
+            if (event.message.text === utils.quickreplyText.ch.food) {
+                var msgs_15 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.ch.food
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_15);
+            }
+            if (event.message.text === utils.quickreplyText.ch.interests) {
+                var msgs_16 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.ch.interests
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_16);
+            }
+            if (event.message.text === utils.quickreplyText.en.personality) {
+                var msgs_17 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.en.personality
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_17);
+            }
+            if (event.message.text === utils.quickreplyText.en.age) {
+                var msgs_18 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.en.age
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_18);
+            }
+            if (event.message.text === utils.quickreplyText.en.education) {
+                var msgs_19 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.en.education
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_19);
+            }
+            if (event.message.text === utils.quickreplyText.en.english) {
+                var msgs_20 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.en.english
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_20);
+            }
+            if (event.message.text === utils.quickreplyText.en.food) {
+                var msgs_21 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.en.food
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_21);
+            }
+            if (event.message.text === utils.quickreplyText.en.interests) {
+                var msgs_22 = [
+                    {
+                        type: 'text',
+                        text: utils.questionResponse.en.interests
+                    }
+                ];
+                return client.replyMessage(event.replyToken, msgs_22);
+            }
+            if (event.message.text.match(utils.basicCommands.showQuestionsChRegexp)) {
+                return client.replyMessage(event.replyToken, utils.chQuickReply);
+            }
+            if (event.message.text.match(utils.basicCommands.showQuestionsEnRegexp)) {
+                return client.replyMessage(event.replyToken, utils.enQuickReply);
+            }
+            if (event.message.text.match(utils.basicCommands.help)) {
+                return client.replyMessage(event.replyToken, utils.helpMessageReply);
+            }
+            return client.replyMessage(event.replyToken, utils.defaultResponse);
+        case 'postback':
+            if (event.postback.data === 'lang=ch' && event.source.userId) {
+                client.linkRichMenuToUser(event.source.userId, richMenuChineseId)
+                    .then(function (res) {
+                    return Promise.resolve(true);
+                })
+                    .catch(function (err) { return console.log(err); });
+            }
+            if (event.postback.data === 'lang=en' && event.source.userId) {
+                client.linkRichMenuToUser(event.source.userId, richMenuEnglishId)
+                    .then(function (res) {
+                    return Promise.resolve(true);
+                })
+                    .catch(function (err) { return console.log(err); });
+            }
+            return Promise.resolve(null);
+        default:
+            return client.pushMessage(event.source.userId, utils.defaultResponse);
+    }
 }
-app.listen(8080);
+function initializeChRichMenu() {
+    client.createRichMenu(richmenuChTemplate)
+        .then(function (id) {
+        richMenuChineseId = id;
+        return client.setRichMenuImage(id, fs_1.default.createReadStream('./assets/chinese.png'));
+    })
+        .then(function () {
+        return client.setDefaultRichMenu(richMenuChineseId);
+    })
+        .catch(function (err) {
+        console.log(err);
+    });
+}
+function initializeEnRichMenu() {
+    client.createRichMenu(richmenuEnTemplate)
+        .then(function (id) {
+        richMenuEnglishId = id;
+        return client.setRichMenuImage(id, fs_1.default.createReadStream('./assets/english.png'));
+    })
+        .catch(function (err) {
+        console.log(err);
+    });
+}
+module.exports = app;
