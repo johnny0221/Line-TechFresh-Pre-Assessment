@@ -37,5 +37,5 @@ help
 
 ## QR Code
 
-![](https://qr-official.line.me/sid/L/551ppxca.png)
+![](https://res.cloudinary.com/dfzjudoit/image/upload/v1611137169/qrcode_jggef4.png)
 
