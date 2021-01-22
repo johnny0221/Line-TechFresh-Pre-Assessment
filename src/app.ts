@@ -1,4 +1,4 @@
-import express, { Application, Request, Response, NextFunction, text } from 'express';
+import express, { Application, Request, Response } from 'express';
 import * as line from '@line/bot-sdk';
 import { Message, MessageAPIResponseBase,WebhookEvent } from '@line/bot-sdk';
 import * as utils from './util';
